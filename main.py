@@ -28,6 +28,19 @@ def inflect(word, case):
 morph = pymorphy2.MorphAnalyzer()
 
 st.title("ФИО Склоняльщик")
+st.markdown(
+    textwrap.dedent(
+        """\
+    Склоняю фамилии-имена-отчества (и любые другие слова) из именительного падежа в какой надо.
+    
+    *Написано Илёй Щуровым в 2020 году с использованием 
+    [pymorphy2](https://pymorphy2.readthedocs.io/en/latest/) и 
+    [streamlit](https://www.streamlit.io), исходники на 
+    [github](http://github.com/ischurov/incline-fio).*
+    """
+    )
+)
+
 text = st.text_area(
     "Список склоняемых ФИО (именительный падеж)",
     textwrap.dedent(
@@ -43,7 +56,7 @@ use_cases = {
     for case, (case_name, default) in cases.items()
 }
 
-st.button("Конвертировать")
+st.button("Склонять")
 for case, use in use_cases.items():
     if use:
         st.text_area(
