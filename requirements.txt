@@ -1,0 +1,2 @@
+streamlit==0.61.0
+pymorphy2==0.8
