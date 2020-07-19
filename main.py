@@ -28,6 +28,7 @@ def inflect(word, case):
 morph = pymorphy2.MorphAnalyzer()
 
 st.title("ФИО Склоняльщик")
+st.sidebar.header("Какие падежи нужны")
 st.markdown(
     textwrap.dedent(
         """\
@@ -52,7 +53,7 @@ text = st.text_area(
 )
 
 use_cases = {
-    case: st.checkbox(label=case_name, value=default)
+    case: st.sidebar.checkbox(label=case_name, value=default)
     for case, (case_name, default) in cases.items()
 }
 
