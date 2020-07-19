@@ -34,7 +34,7 @@ st.markdown(
         """\
     Склоняю фамилии-имена-отчества (и любые другие слова) из именительного падежа в какой надо.
     
-    *Написано Илёй Щуровым в 2020 году с использованием 
+    *Написано Ильёй Щуровым в 2020 году с использованием 
     [pymorphy2](https://pymorphy2.readthedocs.io/en/latest/) и 
     [streamlit](https://www.streamlit.io), исходники на 
     [github](http://github.com/ischurov/incline-fio).*
